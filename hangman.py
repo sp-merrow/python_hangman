@@ -131,7 +131,7 @@ def main():
                 else:
                     break
             
-            currentGame = Game(selectedWord)
+            currentGame = Game(selectedWord.lower())
         else:
             currentGame = Game(None)
         
