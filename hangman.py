@@ -103,7 +103,7 @@ class Game:
         
         self.guessedLtr.append(enteredGuess.lower())
 
-        if enteredGuess not in self.word:
+        if enteredGuess.lower() not in self.word:
             self.currentMan += 1
 
 
