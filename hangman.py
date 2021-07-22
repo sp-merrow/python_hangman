@@ -50,7 +50,7 @@ class Game:
                         returnStr += ', '
                 if ltr not in self.word:
                     if not returnStr:
-                        returnStr += 'Guessed: '
+                        returnStr += 'Does not include: '
                     returnStr += ltr
 
         returnStr += '\n\n'
