@@ -101,7 +101,7 @@ class Game:
             else:
                 print('Invalid input. Try again please.')
         
-        self.guessedLtr.append(enteredGuess)
+        self.guessedLtr.append(enteredGuess.lower())
 
         if enteredGuess not in self.word:
             self.currentMan += 1
