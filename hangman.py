@@ -4,20 +4,13 @@ from os import system, name
 hangWords = []
 manStates = [[], [], [], [], [], [], []]
 
-def clear():
-    if name == 'nt':
-        system('cls')
-    else:
-        system('clear')
-
-
+clear = lambda: system('cls' if name == 'nt' else 'clear')
 
 with open('words.txt', 'r') as words:
     for line in words:
         line = line.replace('\n', '')
         if line.isalpha():
             hangWords.append(line)
-    words.close()
 
 
 with open('hangman_ascii.txt', 'r') as man:
@@ -27,7 +20,6 @@ with open('hangman_ascii.txt', 'r') as man:
         if line == '  +---+':
             stateCount += 1
         manStates[stateCount].append(line)
-    man.close()
 
 
 class Game:
@@ -39,7 +31,6 @@ class Game:
         self.currentMan = 0
         self.guessedLtr = []
     
-
     def __str__(self):
         clear()
         returnStr = ''
